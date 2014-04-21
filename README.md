@@ -1,18 +1,28 @@
 Fibonacci_6306124109
 ====================
-public class Factorial {
+package Fibonacci;
+import java.util.Scanner;
+/**
+ *
+ * @author Praktikum
+ */
+public class Fibonacci
+{
+    public static void main(String[] args)
+    {
+        int f = 0;
+        int g = 1;
+        Scanner input = new Scanner (System.in);
+        System.out.print("Input Angka: ");
+        int a=input.nextInt();
+        System.out.print("Hasil: ");
+        for(int i = 1; i <= a; i++)
+        {
+            f = f + g;
+            g = f - g;
+            System.out.println(f + " ");
+        }
 
-   public static void main(String[] args) {
-       int n = 7;
-       int result = factorial(n);
-       System.out.println("The factorial of 7 is " + result);
-   }
-
-   public static int factorial(int n) {
-       if (n == 0) {
-           return 1;
-       } else {
-           return n * factorial(n - 1);
-       }
-   }
+        System.out.println();
+    }
 }
